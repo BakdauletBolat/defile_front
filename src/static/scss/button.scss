@@ -1,0 +1,20 @@
+.button{
+    padding: 16px 20px;
+    background-color: $mainColor;
+    border:none;
+    color:white;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.button-with-input{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.button:hover {
+    background-color: darken($mainColor,5);  
+}

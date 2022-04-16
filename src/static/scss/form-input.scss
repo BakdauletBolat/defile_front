@@ -1,0 +1,21 @@
+.home__input-container{
+    max-width: 440px;
+}
+
+.form-input{
+    border:none;
+    padding: 17px;
+    color: #ADADAD;
+    background: white;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.form-input-with-button{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.form-input:focus {
+    outline: none;
+}

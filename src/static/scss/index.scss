@@ -1,0 +1,30 @@
+@import './vars';
+
+@import './button.scss';
+@import './header.scss';
+@import './menu-burger.scss';
+@import './main.scss';
+@import './form-input.scss';
+@import './grid.scss';
+@import './categories.scss';
+
+html {
+    font-size: 10px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+
+
+.container {
+    max-width: 120rem;
+    padding: 0 1.2rem;
+    margin: 0 auto;
+}

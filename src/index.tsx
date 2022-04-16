@@ -1,16 +1,19 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'antd/dist/antd.min.css';
 import App from './App';
+import './static/scss/index.scss';
 import reportWebVitals from './reportWebVitals';
-
+import { Context } from './hooks/useContext';
+import ProductStore from './store/ProductStore';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <Context.Provider value={{
+    product: new ProductStore()
+  }}>
     <App />
-  </React.StrictMode>
+  </Context.Provider >
 );
 
 // If you want to start measuring performance in your app, pass a function

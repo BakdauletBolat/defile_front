@@ -1,0 +1,22 @@
+.categories{
+
+    &__title{
+        color:$blackColor;
+        font-weight: bold;
+        font-size: 32px;   
+    }
+
+    &__item{
+        font-size: 16px;
+        padding: 5px 20px;
+        cursor: pointer;
+
+        &:hover{
+            color: darken($blackColor, 5);
+        }
+    }
+
+    &__item--active{
+        color: $mainColor;
+    }
+}
