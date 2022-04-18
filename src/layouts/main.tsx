@@ -3,9 +3,12 @@ import SearchComponent from "./components/search-input";
 import FavoritesComponent from './components/favorites';
 import BasketComponent from "./components/basket";
 import Button from "../components/button";
-import { BarsOutlined, HomeOutlined, FireOutlined, PercentageOutlined, PhoneOutlined,MenuOutlined } from '@ant-design/icons';
+import { BarsOutlined, HomeOutlined, FireOutlined, 
+        PercentageOutlined, PhoneOutlined,MenuOutlined,
+         } from '@ant-design/icons';
 import Row from "../components/row";
 import SizedBox from "../components/sized-box";
+import LocationIcon from '../icons/locationIcon';
 
 
 interface MainProps {
@@ -36,7 +39,7 @@ const pages = [
 function Main({ children }: MainProps) {
     return (
         <div>
-            <div className="header">
+            <header className="header">
             <div className="topHeader">
                 <div className="container topHeader__row">
                     <div className="flex" style={{ width: '100%' }}>
@@ -86,9 +89,70 @@ function Main({ children }: MainProps) {
                     </Row>
                 </div>
             </div>
-            </div>
-            <SizedBox height={92.14*2}></SizedBox>
+            </header>
+            <SizedBox height={84.14*2}></SizedBox>
             {children}
+            <footer className="footer">
+                <div className="container">
+                    <div className="footer__row">
+                        <div>
+                            <img src={require('../static/images/logo.png')} alt="" />
+                            <SizedBox height={50}></SizedBox>
+                            
+                            <Row alignItems="center">
+                                <LocationIcon/>
+                                <SizedBox width={5}></SizedBox>
+                                <div className="footer__item-title">Адрес</div>
+                                <SizedBox width={10}></SizedBox>
+                                <div className="footer__item-desc">Кунаева 36</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <LocationIcon/>
+                                <SizedBox width={5}></SizedBox>
+                                <div className="footer__item-title">Контакты</div>
+                                <SizedBox width={10}></SizedBox>
+                                <div className="footer__item-desc">+7 701 036 55 50</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <LocationIcon/>
+                                <SizedBox width={5}></SizedBox>
+                                <div className="footer__item-title">Почта</div>
+                                <SizedBox width={10}></SizedBox>
+                                <div className="footer__item-desc">groceyish@contact.com</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <LocationIcon/>
+                                <SizedBox width={5}></SizedBox>
+                                <div className="footer__item-title">Рабочий день</div>
+                                <SizedBox width={10}></SizedBox>
+                                <div className="footer__item-desc">8:00 - 20:00, Пон -  Суб</div>
+                            </Row>
+                        </div>
+                        <div>
+                            <div className="footer__title">Главная</div>
+                            <SizedBox height={36}></SizedBox>
+                            <Row alignItems="center">
+                                <div className="footer__item-desc">О нас</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <div className="footer__item-desc">Горячие товары</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <div className="footer__item-desc">Акций</div>
+                            </Row>
+                            <SizedBox height={20}></SizedBox>
+                            <Row alignItems="center">
+                                <div className="footer__item-desc">Новые продкты</div>
+                            </Row>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }

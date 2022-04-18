@@ -1,5 +1,9 @@
 .menu-burger{
     display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0px 10px;
+    color:$blackColor;
     @media screen and (max-width: 1064px) {
         display: block;
     }

@@ -1,6 +1,6 @@
 import Row from "../../../components/row";
 import SizedBox from "../../../components/sized-box";
-import CategoryList from "./products";
+import CategoryList from "./categoriesList";
 
 function Categories() {
     return ( 

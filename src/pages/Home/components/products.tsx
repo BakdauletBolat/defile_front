@@ -1,39 +1,23 @@
-import { SwiperSlide,Swiper } from "swiper/react";
-import {useStoreContext} from '../../../hooks/useContext';
-import { Category } from "../../../store/ProductStore";
-import {observer} from 'mobx-react-lite';
+import Row from "../../../components/row";
+import SizedBox from "../../../components/sized-box";
+import ProductsList from "./productsList";
 
-interface CategoryItemProps {
-    category:Category;
-}
-
-function CategoryItem({category}:CategoryItemProps) {
+function Products() {
     return ( 
-        <div>{category.name}</div>
-     );
-}
-
-function CategoryList()  {
-    const {product} = useStoreContext();
-
-    return ( 
-        <div>
-            <Swiper
-            style={{
-                height:194
-            }}
-            slidesPerView={5}
-            spaceBetween={50}
-            >
-                {product?.categories.map(category=>  <SwiperSlide key={category.id}>
-                        <CategoryItem category={category}></CategoryItem>
-                </SwiperSlide>)
-                }
-              
-               
-            </Swiper>
+        <div className="container">
+              <Row justifyContent="space-between" alignItems="center">
+            <div className="categories__title">Наши продукты</div>
+            <Row>
+                <div className="categories__item categories__item--active">Все</div>
+                <div className="categories__item">Мужской</div>
+                <div className="categories__item">Женский</div>
+            </Row>
+        </Row>
+        <SizedBox height={37}></SizedBox>
+        <ProductsList></ProductsList>
         </div>
+      
      );
 }
 
-export default observer(CategoryList);
+export default Products;

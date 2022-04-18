@@ -1,5 +1,5 @@
 .button{
-    padding: 16px 20px;
+    padding: 12px 15px;
     background-color: $mainColor;
     border:none;
     color:white;
@@ -8,6 +8,18 @@
     display: flex;
     align-items: center;
     font-size: 16px;
+    
+    &__title{
+        @media screen and (max-width: 550px) {
+            display: none;
+        }
+    }
+}
+
+.button--small{
+    font-size: 14px;
+    padding: 8px 15px;
+    background: rgba(255, 3, 3, 0.7);
 }
 
 .button-with-input{

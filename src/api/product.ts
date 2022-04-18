@@ -1,11 +1,15 @@
 import { $authHost,$host } from ".";
-import { Category, Product } from "../store/ProductStore";
+import { ICategory,IProduct } from "../store/ProductStore";
 
 
 export default class ProductService {
 
     async getCategories() {
-       return await $host.get<Category[]>('/api/product/category/');
+       return await $host.get<ICategory[]>('/api/product/category/');
     }
+
+    async getProducts() {
+        return await $host.get<IProduct[]>('/api/product/');
+     }
 
 }

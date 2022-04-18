@@ -7,7 +7,6 @@
     max-width: 440px;
     color:#253D4E;
     line-height: 62px;
-letter-spacing: 0.06em;
 
 @media screen and (max-width:760px) {
     font-size: 40px;
@@ -19,7 +18,7 @@ letter-spacing: 0.06em;
     line-height: 52px;
 }
 
-@media screen and (max-width:560px) {
+@media screen and (max-width:460px) {
     font-size: 30px;
     line-height: 42px;
 }
@@ -27,12 +26,28 @@ letter-spacing: 0.06em;
 
 .home__description{
     font-size: 20px;
+
+    
     max-width: 426px;
     font-weight: 400;
     font-size: 20px;
-line-height: 25px;
 letter-spacing: -0.01em;
     color:  #253D4E;
+
+    @media screen and (max-width:760px) {
+        font-size: 18px;
+
+    }
+    
+    @media screen and (max-width:560px) {
+        font-size: 16px;
+
+    }
+    
+    @media screen and (max-width:460px) {
+        font-size: 14px;
+
+    }
 }
 
 .home__img{
