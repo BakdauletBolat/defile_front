@@ -1,8 +1,14 @@
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import { observer } from 'mobx-react-lite';
+import { useStoreContext } from '../../hooks/useContext';
+import {Link} from 'react-router-dom';
 
-export default function BasketComponent() {
+ function BasketComponent() {
+
+    const {basket} = useStoreContext();
+
     return (
-        <div  style={{
+         <Link to="/basket"  style={{
             display: 'flex',
             cursor: 'pointer',
             alignItems: 'center',
@@ -28,10 +34,12 @@ export default function BasketComponent() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     background: '#FF0303',
-                }}>1</div>
+                }}>{basket.order?.orderitems?.length}</div>
                 <ShoppingCartOutlined style={{ fontSize: '30px', color: '#253D4E' }}></ShoppingCartOutlined>
             </div>
             <div className='topHeader__item-title'>Корзина</div>
-        </div>
+        </Link>
     )
 }
+
+export default observer(BasketComponent);

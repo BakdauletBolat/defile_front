@@ -7,13 +7,13 @@ function Categories() {
         <div className="container">
               <Row justifyContent="space-between" alignItems="center">
             <div className="categories__title">Категорий</div>
-            <Row>
+            {/* <Row>
                 <div className="categories__item categories__item--active">Все</div>
                 <div className="categories__item">Мужской</div>
                 <div className="categories__item">Женский</div>
-            </Row>
+            </Row> */}
         </Row>
-        <SizedBox height={37}></SizedBox>
+        <SizedBox height={17}></SizedBox>
         <CategoryList></CategoryList>
         </div>
       

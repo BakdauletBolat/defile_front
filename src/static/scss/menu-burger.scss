@@ -2,9 +2,11 @@
     display: none;
     font-size: 24px;
     cursor: pointer;
-    padding: 0px 10px;
     color:$blackColor;
-    @media screen and (max-width: 1064px) {
-        display: block;
+    margin-left:20px;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

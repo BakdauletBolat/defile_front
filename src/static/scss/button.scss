@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     font-size: 16px;
+    border: 1px solid $mainColor;
     
     &__title{
         @media screen and (max-width: 550px) {
@@ -16,10 +17,31 @@
     }
 }
 
+.button.smalled {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.button.outlined {
+    background-color:white;
+    border: 1px solid $mainColor;
+    color: $mainColor;
+}
+
+.fullsize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button.shadowed{
+    box-shadow: 0 2px 8px 0 $mainShadowColor;
+}
+
 .button--small{
     font-size: 14px;
     padding: 8px 15px;
-    background: rgba(255, 3, 3, 0.7);
 }
 
 .button-with-input{

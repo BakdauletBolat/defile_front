@@ -1,7 +1,13 @@
 import { HeartOutlined } from '@ant-design/icons';
-export default function FavoritesComponent() {
+import { observer } from 'mobx-react-lite';
+import {Link} from 'react-router-dom';
+import { useStoreContext } from '../../hooks/useContext';
+
+function FavoritesComponent() {
+
+    const {product} = useStoreContext();
     return (
-        <div  style={{
+        <Link to='/favorites'  style={{
             display: 'flex',
             cursor: 'pointer',
             alignItems: 'center',
@@ -13,7 +19,7 @@ export default function FavoritesComponent() {
                 alignItems: 'center',
                 position: 'relative'
             }}>
-                <div style={{
+                {product!.productsFavorites.length > 0 ? (<div style={{
                     position: 'absolute',
                     top: -7,
                     left: 15,
@@ -28,10 +34,12 @@ export default function FavoritesComponent() {
                     alignItems: 'center',
                     background: '#FF0303',
 
-                }}>1</div>
+                }}>{product?.productsFavorites.length}</div>) : ''}
                 <HeartOutlined style={{ fontSize: '28px', color: '#253D4E' }}></HeartOutlined>
             </div>
             <div className='topHeader__item-title'>Избранные</div>
-        </div>
+        </Link>
     )
 }
+
+export default observer(FavoritesComponent)

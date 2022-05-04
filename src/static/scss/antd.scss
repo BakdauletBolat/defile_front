@@ -1,0 +1,34 @@
+.ant-btn-primary {
+    background-color: $mainColor!important;
+    border-color: $mainColor!important;
+}
+.ant-btn-default:focus, .ant-btn-default:hover{
+    color: $mainColor;
+}
+
+.ant-btn-default{
+    background-color: white;
+    color: $mainColor;
+    border-color: $mainColor!important;
+}
+
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected{
+    background-color: #ff03034c;
+}
+
+.redColor{
+    color: $mainColor!important;
+}
+
+.ant-tree{
+    background-color: transparent;
+}
+
+
+.antd-main-tree-title{
+    font-size: 16px;
+}
+
+.ant-btn[disabled] {
+    color: white!important;
+}

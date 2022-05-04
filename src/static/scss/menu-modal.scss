@@ -1,0 +1,50 @@
+.menu-modal {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    z-index: 102;
+    background: rgba(255, 255, 255, 1);
+
+
+
+    &__item {
+        padding: 5px;
+        font-weight: 700;
+        color: $blackColor;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #ff030393;
+            color: white;
+        }
+
+        &--active {
+            background-color: #ff030393;
+            color: white;
+        }
+
+
+    }
+
+    &__subitem {
+        padding: 5px;
+        font-weight: 400;
+        color: $blackColor;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+
+.mobile-menu {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(30px);
+}

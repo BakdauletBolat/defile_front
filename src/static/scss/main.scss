@@ -2,10 +2,18 @@
     background: radial-gradient(65.81% 245.2% at 31.93% 49.92%, #FFCBCB 0%, #FF0303 100%);
 }
 
+.home__slider{
+    height: 513px;
+
+    @media screen and (max-width: 608px) {
+        height: 400px;
+    }
+}
+
 .home__title{
     font-size: 50px;
     max-width: 440px;
-    color:#253D4E;
+    color:#ffffff;
     line-height: 62px;
 
 @media screen and (max-width:760px) {
@@ -32,7 +40,7 @@
     font-weight: 400;
     font-size: 20px;
 letter-spacing: -0.01em;
-    color:  #253D4E;
+    color:  #ffffff;
 
     @media screen and (max-width:760px) {
         font-size: 18px;

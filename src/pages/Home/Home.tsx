@@ -1,11 +1,7 @@
 import Main from '../../layouts/main';
-
 import { Swiper, SwiperSlide, } from 'swiper/react';
-import {  Pagination } from 'swiper';
-
+import {  Pagination,EffectCreative } from 'swiper';
 import SwiperClass from 'swiper/types/swiper-class';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Row from '../../components/row';
@@ -16,36 +12,46 @@ import Categories from './components/categories';
 import {useStoreContext} from '../../hooks/useContext';
 import Products from './components/products';
 
+
 function Home() {
 
     const [swiper,setSwiper] = useState<SwiperClass>();
 
     const {product} = useStoreContext();
 
+    const background = require('../../static/images/rack-clothes-store.jpg');
+
     useEffect(()=>{
-        product?.getCategories();
         product?.getProducts();
     },[]);
 
     return (
         <Main>
             <Swiper
-            modules={[Pagination]}
+            modules={[Pagination,EffectCreative]}
                 slidesPerView={1}
-                style={{
-                    height:513
+                className='home__slider'
+                effect={"creative"}
+                creativeEffect={{
+                    prev: {
+                        shadow: true,
+                        translate: [0, 0, -400],
+                    },
+                    next: {
+                        translate: ["100%", 0, 0],
+                    },
                 }}
-
                 pagination={{ clickable: true }}
                 grabCursor={true}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiperEl) => setSwiper(swiperEl)}
+                
             >
                 <SwiperSlide >
-                    <div className='slider_backgound' style={{height:'100%'}}>
+                    <div className='slider_backgound-img'  style={{height:'100%',backgroundImage: `url(${background})`}}>
                     <div className='container' style={{height:'100%',display:'flex'}}>
-                        <Grid className='grid-template-2fr' alignItems='center'>
-                            <div>
+                    <Grid className='grid-template-2fr' alignItems='center'>
+                            <div className='slider__content'>
                                  <h1 className='home__title'>Одевайтесь в лучшее вместе с «Дефиле»!</h1>  
                                  <p className='home__description'>Миссия нашей компании – одеть граждан Казахстана в лучшую одежду:</p>
                                  <Row alignItems='center' className='home__input-container'>
@@ -53,33 +59,25 @@ function Home() {
                                         <button className='button button-with-input'type='submit'>Подписаться</button>
                                  </Row>
                             </div>
-                            <div className='home__img'>
-                                <img src={require('../../static/images/girl.png')} alt="" />
-                            </div>
                         </Grid>
                     </div>
-                    </div>
-                    
+                    </div> 
                 </SwiperSlide>
                 <SwiperSlide >
-                    <div className='slider_backgound' style={{height:'100%'}}>
+                    <div className='slider_backgound-img'  style={{height:'100%',backgroundImage: `url(${background})`}}>
                     <div className='container' style={{height:'100%',display:'flex'}}>
-                        <Grid className='grid-template-2fr' alignItems='center'>
-                            <div>
-                                 <h1 className='home__title'>Одевайтесь в лучшее sd с «Дефиле»!</h1>  
+                    <Grid className='grid-template-2fr' alignItems='center'>
+                            <div className='slider__content'>
+                                 <h1 className='home__title'>Одевайтесь в лучшее вместе с «Дефиле» 2!</h1>  
                                  <p className='home__description'>Миссия нашей компании – одеть граждан Казахстана в лучшую одежду:</p>
-                                 <Row alignItems='center' className='home__input-container'>
+                                 {/* <Row alignItems='center' className='home__input-container'>
                                         <input className='form-input form-input-with-button' type="text" />
                                         <button className='button button-with-input'type='submit'>Подписаться</button>
-                                 </Row>
-                            </div>
-                            <div className='home__img'>
-                                <img src={require('../../static/images/girl.png')} alt="" />
+                                 </Row> */}
                             </div>
                         </Grid>
                     </div>
-                    </div>
-                    
+                    </div> 
                 </SwiperSlide>
             </Swiper>
             <SizedBox height={63}></SizedBox>

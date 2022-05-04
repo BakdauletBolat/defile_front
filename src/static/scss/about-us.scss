@@ -1,0 +1,44 @@
+.about-us__sidebar{
+    position: sticky;
+    top:0;
+}
+
+.about-us__sidebar-container{
+    position: sticky;
+    top:180px;
+
+    @media screen and (max-width:768px) {
+        top: 80px;
+    }
+
+    @media screen and (max-width:576px) {
+        top: 0px;
+        position: relative;
+    }
+}
+
+.about-us__button{
+    padding: 12px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid rgba(173, 173, 173, 0.25);
+    border-radius: 3px;
+
+    &--active{
+        background-color: $mainColor;
+        border: 1px solid $mainColor;
+
+        color:white;
+    }
+}
+
+.about-us__content-title{
+    font-size: 25px;
+    line-height: 31px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-us__content-desc{
+    font-size: 16px;
+}

@@ -1,16 +1,18 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 
 interface RowProps {
     children:  React.ReactNode,
-    alignItems?: 'center' | 'start' | 'end' | 'stretch',
+    alignItems?: 'center' | 'flex-start' | 'end' | 'stretch',
     justifyContent?: 'center' | 'start' | 'end' | 'space-between',
     style?: any,
-    className? : string
+    className? : string,
+    onClick?: MouseEventHandler<HTMLDivElement>
 }
 
-export default function Row({children,alignItems,justifyContent,style,className}:RowProps) {
+export default function Row({children,alignItems,justifyContent,style,className,onClick}:RowProps) {
     return <div 
+    onClick={onClick}
     className={className + ' row'}
     style={{
 alignItems: alignItems,

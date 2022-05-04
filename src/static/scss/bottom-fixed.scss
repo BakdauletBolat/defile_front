@@ -1,0 +1,14 @@
+.bottom-fixed{
+    position: fixed;
+    padding: 15px 0px;
+    left:0;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: none;
+    
+    @media screen and (max-width:550px) {
+        display: block;
+    }
+}

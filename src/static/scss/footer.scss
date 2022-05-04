@@ -12,8 +12,12 @@ color:$blackColor;
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
         grid-row-gap: 50px;
-        grid-column-gap: 150px;
+        grid-column-gap: 50px;
         justify-content: space-between;
+
+        @media screen and (max-width: 680px) {
+            justify-content: center;
+        }
     }
 
     &__item-title {
@@ -30,5 +34,32 @@ color:$blackColor;
         font-size: 16px;
         line-height: 20px;
         color: $blackColor;
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 468px) {
+            justify-content: center;
+        }
+    }
+
+    &__copyright {
+        font-size: 16px;
+        color: $blackColor;
+
+
+        @media screen and (max-width: 468px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__icon{
+        font-size: 30px;
+        padding: 10px;
+        color:$mainColor;
     }
 }

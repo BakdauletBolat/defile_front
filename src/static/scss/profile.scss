@@ -1,0 +1,31 @@
+.profile{
+    margin-top: 4rem;
+
+    @media screen and(max-width: 768px) {
+        margin-top: 2rem;
+    }
+
+    position: relative;
+
+    &__name {
+        color: $blackColor;
+        font-weight: bold;
+        font-size: 32px;
+
+        @media screen and(max-width:550px) {
+            font-size: 24px;
+        }
+    }
+
+    &__email {
+        color: #ADADAD;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    &__exit{
+        margin-bottom: 30px;
+        cursor: pointer;
+        color:$blackColor;
+    }
+}

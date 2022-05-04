@@ -1,0 +1,30 @@
+.infobox-content{
+    min-width: 320px;
+}
+
+.infobox-content-title{
+    & span {
+        font-size: 16px;
+        font-weight: 500;
+        color:$blackColor;
+    }
+
+    font-size: 14px;
+}
+
+.infobox-content-item{
+    margin-top: 10px;
+}
+
+.infobox-item{
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.infobox-title{
+    font-size: 16px;
+    font-weight: 500;
+    color: $mainColor;
+    text-align: center;
+    width: 100%;
+}

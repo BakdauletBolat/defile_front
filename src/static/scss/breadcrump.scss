@@ -1,0 +1,27 @@
+.breadcrumb{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb__item{
+    display: flex;
+    color: $blackColor;
+   
+    & a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.breadcrumb__item--last{
+    display: flex;
+    color: $blackColor;
+    & a {
+        text-decoration: none;
+    }
+}
+
+.breadcrumb__divider{
+    padding: 0px 8px;
+}

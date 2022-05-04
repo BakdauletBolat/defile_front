@@ -10,6 +10,19 @@
 @import './slider.scss';
 @import './product.scss';
 @import './footer.scss';
+@import './detail.scss';
+@import './breadcrump.scss';
+@import './bottom-fixed.scss';
+@import './order.scss';
+@import './b-modal.scss';
+@import './antd.scss';
+@import './menu-modal.scss';
+@import './subcategory-detail.scss';
+@import './profile.scss';
+@import './loading-screen.scss';
+@import './filter.scss';
+@import './map.scss';
+@import './about-us.scss';
 
 html {
     font-size: 10px;
@@ -24,10 +37,20 @@ body {
     font-size: 1.4rem;
 }
 
+body.modal-open{
+    overflow: hidden;
+}
+
 
 
 .container {
     max-width: 120rem;
     padding: 0 1.5rem;
     margin: 0 auto;
+}
+
+
+
+.ant-notification-notice-btn{
+    float: none;
 }
