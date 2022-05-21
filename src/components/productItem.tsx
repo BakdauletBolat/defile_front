@@ -80,9 +80,7 @@ function ProductItem({ productItem }: ProuctItemProps) {
     }
 
     return (
-        <div style={{
-            position:'relative'
-        }}>
+        <div className="product__item-wrapper" >
              <div onClick={()=>{
                  console.log('click');
                 addToFavorites(productItem.id);

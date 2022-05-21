@@ -134,15 +134,15 @@ function Main({ children }: MainProps) {
                             </Row>
                             <SizedBox height={20}></SizedBox>
                             <Row alignItems="center">
-                                <div className="footer__item-desc">Горячие товары</div>
+                            <Link to='/is_hot' className="footer__item-desc">Горячие товары</Link>
                             </Row>
                             <SizedBox height={20}></SizedBox>
                             <Row alignItems="center">
-                                <div className="footer__item-desc">Акций</div>
+                            <Link to='/is_stock' className="footer__item-desc">Акций</Link>
                             </Row>
                             <SizedBox height={20}></SizedBox>
                             <Row alignItems="center">
-                                <div className="footer__item-desc">Новые продкты</div>
+                            <Link to='/is_new' className="footer__item-desc">Новые продажи</Link>
                             </Row>
                         </div>
                         <div>
@@ -155,7 +155,8 @@ function Main({ children }: MainProps) {
                                 }} />
                
                                 <SizedBox width={10}></SizedBox>
-                                <div className="footer__item-desc">+7 701 036 55 50</div>
+                                <a href="tel://+7 701 036 55 50" className="footer__item-desc">+7 701 036 55 50</a>
+           
                             </Row>
                             <SizedBox height={20}></SizedBox>
                             <Row alignItems="center">

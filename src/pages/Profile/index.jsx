@@ -109,13 +109,13 @@ const OrdersCollapse = () => {
     </Collapse>
 }
 
-const ProductsFavorites = () => {
+const ProductsFavorites = observer(() => {
     const { product } = useStoreContext();
     return <div className="product__row">
         {product?.productsFavorites.map(product => (
             <ProductItem key={product.id} productItem={product}></ProductItem>
         ))}
     </div>
-}
+});
 
 export default observer(ProfilePage);

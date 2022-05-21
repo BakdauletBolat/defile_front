@@ -7,6 +7,7 @@ import { Context } from './hooks/useContext';
 import ProductStore from './store/ProductStore';
 import { BrowserRouter } from 'react-router-dom';
 import BasketStore from './store/BasketStore';
+import ApplicationStore from './store/ApplicationsStore';
 
 
 const root = ReactDOM.createRoot(
@@ -17,6 +18,7 @@ root.render(
   <Context.Provider value={{
     basket: new BasketStore(),
     product: new ProductStore(),
+    application: new ApplicationStore()
   }}>
     <BrowserRouter>
       <App />

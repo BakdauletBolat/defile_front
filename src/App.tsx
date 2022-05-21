@@ -25,11 +25,12 @@ function App() {
     }
   }
 
-  const { basket } = useStoreContext();
+  const { basket,application } = useStoreContext();
   const [notificationApi, contextHolder] = notification.useNotification();
 
 
   const init = async () => {
+    application?.getSlides();
     basket?.getUser().then(() => {
       basket?.getSession();
       basket?.getOrder();
